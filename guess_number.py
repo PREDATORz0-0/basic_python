@@ -24,3 +24,17 @@
 import random   # Python module named random
 
 random_number = random.randint(1,20) # Generate a random number between 1 and 20
+'''''''''''''
+import random
+def number_guess():
+    random_number=random.randint(1,6)
+    guess_count=1
+    while guess<=5:
+        guess=int(input("ENTER A NUMBER TO GUESS BETWEEN 1 TO 6"))
+        if guess==random_number:
+            print("HORRAY YOU GOT IT IN THE",guess_count,"TIME")
+        elif guess>random_number:
+            print("THE PREDICTED NUMBER IS HIGH")
+        else:
+            print("THE PREDICTED NUMBER IS LOW")
+        
