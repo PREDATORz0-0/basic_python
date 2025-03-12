@@ -19,4 +19,16 @@ Example
   Step 3: 1 + 1 = 2
   Output: 2
 
-"""
+"""""""""
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(n))
+
+def single_digit(n):
+    if n < 10:
+        return n
+    while n >= 10:
+        n = sum_of_digits(n)
+        return n
+number = int(input("Enter a number: "))
+result = single_digit(number)
+print ("THE SUM OF DIGITS IS ",result)
